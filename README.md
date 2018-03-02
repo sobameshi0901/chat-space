@@ -32,7 +32,6 @@ Datebase creation
 |------|----|-------|
 |name|string|null: false|
 |email|string|null: false|
-|password関連|||
 
 ### Association
 - has_many :members
@@ -42,7 +41,6 @@ Datebase creation
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
-|last_update|string|null: false|
 
 ### Association
 - has_many :members
@@ -64,8 +62,6 @@ Datebase creation
 |------|----|-------|
 |comment|text|null: false|
 |avatar関連|??||
-|created_at|timestamp|null: false|
-|updated_at|timestamp|null: false|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 
