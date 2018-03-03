@@ -15,7 +15,7 @@ Datebase creation
 - has_many :messages
 - has_many :groups, through: :members
 
-## groupテーブル
+## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false, unique: true|
@@ -36,7 +36,7 @@ Datebase creation
 - belongs_to :group
 - belongs_to :user
 
-## messageテーブル
+## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |content|string||
