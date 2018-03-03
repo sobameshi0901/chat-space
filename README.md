@@ -36,6 +36,7 @@ Datebase creation
 ### Association
 - has_many :members
 - has_many :messages
+- has_many :groups, through: :members
 
 ## groupテーブル
 |Column|Type|Options|
@@ -45,6 +46,7 @@ Datebase creation
 ### Association
 - has_many :members
 - has_many :messages
+- has_many :users, through: :members
 
 ## membersテーブル
 
