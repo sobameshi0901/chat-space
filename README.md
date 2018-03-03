@@ -61,7 +61,7 @@ Datebase creation
 |Column|Type|Options|
 |------|----|-------|
 |comment|text|null: false|
-|avatar関連|??||
+|image|text||
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 
