@@ -7,8 +7,8 @@ Datebase creation
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false, index: true|
-|mail|string|null: false||
+|name|string|null: false, index: true, unique: true|
+|mail|string|null: false|
 
 ### Association
 - has_many :members
@@ -18,7 +18,7 @@ Datebase creation
 ## groupテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false|
+|name|string|null: false, unique: true|
 
 ### Association
 - has_many :members
