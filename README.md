@@ -8,7 +8,7 @@ Datebase creation
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|add_index|
-|email|string|null: false||
+|mail|string|null: false||
 
 ### Association
 - has_many :members
@@ -39,7 +39,7 @@ Datebase creation
 ## messageテーブル
 |Column|Type|Options|
 |------|----|-------|
-|comment|string||
+|content|string||
 |image|text||
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
