@@ -30,8 +30,8 @@ Datebase creation
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false|
-|email|string|null: false|
+|name|string|null: false|add_index|
+|email|string|null: false||
 
 ### Association
 - has_many :members
@@ -52,7 +52,7 @@ Datebase creation
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
+|user_id|integer|null: false, foreign_key: true, add_index|
 |group_id|integer|null: false, foreign_key: true|
 
 ### Association
