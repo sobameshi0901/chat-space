@@ -60,7 +60,7 @@ Datebase creation
 ## messageテーブル
 |Column|Type|Options|
 |------|----|-------|
-|comment|text|null: false|
+|comment|string||
 |image|text||
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
