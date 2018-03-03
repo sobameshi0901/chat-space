@@ -7,7 +7,7 @@ Datebase creation
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false|add_index|
+|name|string|null: false, index: true|
 |mail|string|null: false||
 
 ### Association
@@ -29,7 +29,7 @@ Datebase creation
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true, add_index|
+|user_id|integer|null: false, foreign_key: true, index: true|
 |group_id|integer|null: false, foreign_key: true|
 
 ### Association
