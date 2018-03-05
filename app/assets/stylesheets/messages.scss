@@ -14,25 +14,28 @@ header {
   background-color: black;
 }
 
-.content-left {
+.sideBar {
   height: 100%;
   width: 300px;
   background-color: #2f3e51;
   float: left;
+  color:#FFFFFF;
 
 }
 
 .userProfile {
   height: 100px;
   background-color: #253141;
+  padding: 35px 20px 0 20px;
 }
 
 .userGroups {
   height: calc(100% - );
+  padding:0 20px;
 }
 
 
-.content-right {
+.mainContent {
   height: 100%;
   width: calc(100vw - 300px);
   float: right;
