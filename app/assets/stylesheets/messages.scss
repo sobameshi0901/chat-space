@@ -51,6 +51,15 @@ header {
 .userGroups {
   height: calc(100% - );
   padding:0 20px;
+  &__group {
+    padding-bottom: 40px;
+    h1 {
+      font-size: 15px;
+    }
+    p {
+      font-size:11px;
+    }
+  }
 }
 
 
@@ -65,4 +74,5 @@ header {
   height: 100px;
   background-color: #FFF;
 }
+
 
