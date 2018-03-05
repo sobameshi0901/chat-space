@@ -1,3 +1,46 @@
-// Place all the styles related to the messages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+$here-blue: #38AEF0;
+
+header {
+  width: 100vw;
+  text-align: center;
+  background-color: $here-blue;
+  padding:5px 0;
+  color:white;
+}
+
+.contents {
+  height: 600px;
+  width: 100%;
+  background-color: black;
+}
+
+.content-left {
+  height: 100%;
+  width: 300px;
+  background-color: #2f3e51;
+  float: left;
+
+}
+
+.userProfile {
+  height: 100px;
+  background-color: #253141;
+}
+
+.userGroups {
+  height: calc(100% - );
+}
+
+
+.content-right {
+  height: 100%;
+  width: calc(100vw - 300px);
+  float: right;
+  background-color: #FAFAFA;
+}
+
+.groupProfile {
+  height: 100px;
+  background-color: #FFF;
+}
+
