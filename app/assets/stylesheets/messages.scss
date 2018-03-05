@@ -51,15 +51,23 @@ header {
 .userGroups {
   height: calc(100% - );
   padding:0 20px;
-  &__group {
+}
+
+.userGroup {
     padding-bottom: 40px;
-    h1 {
+    &__name {
       font-size: 15px;
     }
-    p {
+    &__text {
       font-size:11px;
     }
   }
+
+
+.groupProfile {
+  height: 100px;
+  background-color: #FFF;
+
 }
 
 
@@ -68,11 +76,6 @@ header {
   width: calc(100vw - 300px);
   float: right;
   background-color: #FAFAFA;
-}
-
-.groupProfile {
-  height: 100px;
-  background-color: #FFF;
 }
 
 

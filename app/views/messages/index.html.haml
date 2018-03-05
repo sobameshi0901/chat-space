@@ -12,12 +12,15 @@
           %a{href: '#'}
             %i.fa.fa-cog
     .userGroups
-      .userGroups__group
-        %h1 ナイスグループ
-        %p 初めましてですか？
-      .userGroups__group
-        %h1 なんかのグループ
-        %p 今月もよろしく
+      .userGroup
+        %h1.userGroup__name ナイスグループ
+        %p.userGroup__text 初めましてですか？
+      .userGroup
+        %h1.userGroup__name なんかのグループ
+        %p.userGroup__text 今月もよろしく
+      .userGroup
+        %h1.userGroup__name 仲良しグループ
+        %p.userGroup__text 初めまして
   .mainContent
     .groupProfile
     .groupChat
