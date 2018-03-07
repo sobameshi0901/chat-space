@@ -2,14 +2,15 @@
 .contents
   .sideBar
     .userProfile
-      %h1.userProfile__name ユーザー名
+      %h1.userProfile__name 
+        = current_user.name
       %ul.userProfile__icons
         %li<
           = link_to '#' do
-            %i.fa.fa-pencil-square-o
+            = fa_icon 'pencil-square-o', class: 'icon'
         %li<
-          = link_to '#' do
-            %i.fa.fa-cog
+          = link_to edit_user_path(current_user) do
+            = fa_icon 'cog', class: 'icon'
     .userGroups
       .userGroup
         %h1.userGroup__name ナイスグループ
