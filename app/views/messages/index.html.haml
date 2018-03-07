@@ -1,2 +1,62 @@
-%h1 Messages#index
-%p Find me in app/views/messages/index.html.haml
+%header
+.contents
+  .sideBar
+    .userProfile
+      %h1.userProfile__name ユーザー名
+      %ul.userProfile__icons
+        %li<
+          = link_to '#' do
+            %i.fa.fa-pencil-square-o
+        %li<
+          = link_to '#' do
+            %i.fa.fa-cog
+    .userGroups
+      .userGroup
+        %h1.userGroup__name ナイスグループ
+        %p.userGroup__text 初めましてですか？
+      .userGroup
+        %h1.userGroup__name なんかのグループ
+        %p.userGroup__text 今月もよろしく
+      .userGroup
+        %h1.userGroup__name 仲良しグループ
+        %p.userGroup__text 初めまして
+  .mainContent
+    .groupProfile
+      .groupDetail
+        %h1.groupDetail__name 日本自動車連合会
+        %p.groupDetail__members 鈴木、本田、豊田、松田
+      .groupButton
+        %a.groupButton__edit{href: '#'} Edit
+    .groupChat
+      .chatMain
+        .chatBox
+          .chatBox__name
+            %p 鈴木
+          .chatBox__date
+            %p 2007/10/01/ 07:30:12
+          .chatBox__text
+            %p リーマンショック
+        .chatBox
+          .chatBox__name
+            %p 本田
+          .chatBox__date
+            %p 2007/10/01/ 07:35:12
+          .chatBox__text
+            %p リーマンショック
+        .chatBox
+          .chatBox__name
+            %p 豊田
+          .chatBox__date
+            %p 2007/10/01/ 07:40:12
+          .chatBox__text
+            %p リーマンショック
+      .postBox
+        %form
+          %input.postBox__text{name: 'text', placeholder: 'tyep a message'}
+          .postBox__file
+            %label
+              %input{type:'file', style: 'display:none'}
+              %i.fa.fa-picture-o.icon
+          %button.postBox__button{type: 'submit'}
+            Submit
+
