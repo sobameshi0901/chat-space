@@ -1,25 +1,27 @@
-$here-blue: #38AEF0;
+$rightBlue: #38AEF0;
+$grey: #434A54;
+$white: #FFFFFF;
+
 
 header {
   width: 100vw;
   text-align: center;
-  background-color: $here-blue;
+  background-color: $rightBlue;
   padding:5px 0;
   color:white;
 }
 
 .contents {
-  height: 600px;
+  height: 700px;
   width: 100%;
   background-color: black;
 }
 
 .sideBar {
-  height: 100%;
   width: 300px;
   background-color: #2f3e51;
   float: left;
-  color:#FFFFFF;
+  color:$white;
 
 }
 
@@ -40,7 +42,7 @@ header {
       float:left;
       padding-left: 5px;
       a{
-      color:#FFFFFF;
+      color:$white;
       }
     }
   }
@@ -96,8 +98,8 @@ header {
     float:right;
     margin-top: 28px;
     padding:10px 20px;
-    border: 1px solid $here-blue;
-    color: $here-blue;
+    border: 1px solid $rightBlue;
+    color: $rightBlue;
     text-decoration: none;
   }
 }
@@ -121,7 +123,7 @@ header {
     p {
       font-weight: bold;
       font-size: 16px;
-      color: #434A54;
+      color: $grey;
     }
   }
   &__date {
@@ -136,7 +138,7 @@ header {
   padding-top: 10px;
   p {
     font-size: 14px;
-    color: #434A54;
+    color: $grey;
   }
  }
 }
@@ -169,7 +171,7 @@ header {
     float: right;
     height: 50px;
     padding: 0 30px;
-    background-color: $here-blue;
+    background-color: $rightBlue;
     color:white;
     font-size: 16px;
   }
