@@ -13,3 +13,9 @@ module ChatSpace
     # -- all .rb files in that directory are automatically loaded.
   end
 end
+
+module ChatSpace
+  class Application < Rails::Application
+    config.i18n.default_locale = :ja
+  end
+end
