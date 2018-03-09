@@ -4,53 +4,6 @@
   background-color: black;
 }
 
-.sideBar {
-  height: 100%;
-  width: 300px;
-  background-color: #2f3e51;
-  float: left;
-  color:$white;
-
-}
-
-.userProfile {
-  height: 100px;
-  background-color: #253141;
-  padding: 35px 20px 0 20px;
-  &__name {
-    display: inline-block;
-    float: left;
-    font-size: 16px;
-    font-weight: bold;
-  }
-  &__icons {
-    display: inline-block;
-    float: right;
-    li {
-      float:left;
-      padding-left: 5px;
-      a{
-      color: $white;
-      }
-    }
-  }
-
-}
-
-.userGroups {
-  padding:20px 20px 0 20px;
-}
-
-.userGroup {
-    padding-bottom: 40px;
-    &__name {
-      font-size: 15px;
-    }
-    &__text {
-      font-size:11px;
-    }
-}
-
 .mainContent {
   height: 100%;
   width: calc(100vw - 300px);
