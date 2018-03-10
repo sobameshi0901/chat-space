@@ -1,25 +1,7 @@
 %header
 .contents
-  .sideBar
-    .userProfile
-      %h1.userProfile__name ユーザー名
-      %ul.userProfile__icons
-        %li<
-          = link_to '#' do
-            %i.fa.fa-pencil-square-o
-        %li<
-          = link_to '#' do
-            %i.fa.fa-cog
-    .userGroups
-      .userGroup
-        %h1.userGroup__name ナイスグループ
-        %p.userGroup__text 初めましてですか？
-      .userGroup
-        %h1.userGroup__name なんかのグループ
-        %p.userGroup__text 今月もよろしく
-      .userGroup
-        %h1.userGroup__name 仲良しグループ
-        %p.userGroup__text 初めまして
+  = render '/layouts/side_bar'
+
   .mainContent
     .groupProfile
       .groupDetail

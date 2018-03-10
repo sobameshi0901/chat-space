@@ -4,53 +4,6 @@
   background-color: black;
 }
 
-.sideBar {
-  height: 100%;
-  width: 300px;
-  background-color: #2f3e51;
-  float: left;
-  color:$white;
-
-}
-
-.userProfile {
-  height: 100px;
-  background-color: #253141;
-  padding: 35px 20px 0 20px;
-  &__name {
-    display: inline-block;
-    float: left;
-    font-size: 16px;
-    font-weight: bold;
-  }
-  &__icons {
-    display: inline-block;
-    float: right;
-    li {
-      float:left;
-      padding-left: 5px;
-      a{
-      color: $white;
-      }
-    }
-  }
-
-}
-
-.userGroups {
-  padding:20px 20px 0 20px;
-}
-
-.userGroup {
-    padding-bottom: 40px;
-    &__name {
-      font-size: 15px;
-    }
-    &__text {
-      font-size:11px;
-    }
-}
-
 .mainContent {
   height: 100%;
   width: calc(100vw - 300px);
@@ -86,8 +39,8 @@
     float:right;
     margin-top: 28px;
     padding: 10px 20px;
-    border: 1px solid $rightBlue;
-    color: $rightBlue;
+    border: 1px solid $light_blue;
+    color: $light_blue;
     text-decoration: none;
   }
 }
@@ -159,7 +112,7 @@
     float: right;
     height: 50px;
     padding: 0 30px;
-    background-color: $rightBlue;
+    background-color: $light_blue;
     color:white;
     font-size: 16px;
   }
