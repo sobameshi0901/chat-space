@@ -5,40 +5,27 @@
   .mainContent
     .groupProfile
       .groupDetail
-        %h1.groupDetail__name 日本自動車連合会
-        %p.groupDetail__members 鈴木、本田、豊田、松田
+        %h1.groupDetail__name= @group.name
+        %p.groupDetail__members= @group.users.map{|user| user.name}.join("、")
       .groupButton
         %a.groupButton__edit{href: '#'} Edit
     .groupChat
       .chatMain
-        .chatBox
-          .chatBox__name
-            %p 鈴木
-          .chatBox__date
-            %p 2007/10/01/ 07:30:12
-          .chatBox__text
-            %p リーマンショック
-        .chatBox
-          .chatBox__name
-            %p 本田
-          .chatBox__date
-            %p 2007/10/01/ 07:35:12
-          .chatBox__text
-            %p リーマンショック
-        .chatBox
-          .chatBox__name
-            %p 豊田
-          .chatBox__date
-            %p 2007/10/01/ 07:40:12
-          .chatBox__text
-            %p リーマンショック
+        - if @messages.present?
+          - @messages.each do |message|
+            .chatBox
+              .chatBox__name
+                %p= message.user.name
+              .chatBox__date
+                %p= message.created_at
+              .chatBox__text
+                %p= message.content
       .postBox
-        %form
-          %input.postBox__text{name: 'text', placeholder: 'tyep a message'}
+        = form_for [@group,@message] do |f| 
+          = f.text_field :content, placeholder: 'tyep a message', class: 'postBox__text'
           .postBox__file
-            %label
-              %input{type:'file', style: 'display:none'}
+            = f.label :image do
+              = f.file_field :image, style: 'display:none'
               %i.fa.fa-picture-o.icon
-          %button.postBox__button{type: 'submit'}
-            Submit
+          = f.submit 'Submit', class: 'postBox__button'
 
