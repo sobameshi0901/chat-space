@@ -1,0 +1,8 @@
+.chatBox
+  .chatBox__name
+    %p= message.user.name
+  .chatBox__date
+    %p= message.created_at
+  .chatBox__text
+    %p= message.content
+  = image_tag "#{message.image.url}",class: 'lower-message__image' if message.image.present?

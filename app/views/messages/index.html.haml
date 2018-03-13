@@ -11,21 +11,13 @@
         %a.groupButton__edit{href: '#'} Edit
     .groupChat
       .chatMain
-        - if @messages.present?
-          - @messages.each do |message|
-            .chatBox
-              .chatBox__name
-                %p= message.user.name
-              .chatBox__date
-                %p= message.created_at
-              .chatBox__text
-                %p= message.content
+        = render @messages
+        / = render partial: 'message', collection: @messagesの省略
       .postBox
         = form_for [@group,@message] do |f| 
           = f.text_field :content, placeholder: 'tyep a message', class: 'postBox__text'
           .postBox__file
             = f.label :image do
               = f.file_field :image, style: 'display:none'
-              %i.fa.fa-picture-o.icon
-          = f.submit 'Submit', class: 'postBox__button'
-
+              = fa_icon 'picture-o', class: 'icon'
+          = f.submit 'Send', class: 'postBox__button'
