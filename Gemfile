@@ -68,4 +68,3 @@ gem 'pry-byebug'
 gem 'carrierwave'
 
 gem 'mini_magick'
-
