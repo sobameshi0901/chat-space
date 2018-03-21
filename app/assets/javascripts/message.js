@@ -24,8 +24,7 @@ $(function(){
   $('#new_message').on('submit', function(e){
     e.preventDefault();
     var formData = new FormData(this);
-    var href = window.location.href
-    console.log(href)
+    var href = window.location.href;
     $.ajax({
       url: href,
       type: "POST",
@@ -35,7 +34,6 @@ $(function(){
       contentType: false
     })
     .done(function(data){
-      console.log(data);
       var html = buildHTML(data);
       $('.chatMain').append(html);
       $('#message_image').val('');
