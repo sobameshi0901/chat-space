@@ -8,7 +8,7 @@
         %h1.groupDetail__name= @group.name
         %p.groupDetail__members= @group.users.map{|user| user.name}.join("、")
       .groupButton
-      = link_to 'Edit', group_edit_path(@group), class: 'groupButton__edit'
+        = link_to 'Edit', edit_group_path(@group), class: 'groupButton__edit'
     .groupChat
       .chatMain
         = render @messages
