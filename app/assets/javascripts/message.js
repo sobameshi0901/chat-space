@@ -41,6 +41,9 @@ $(function(){
       $('#message_image').val('');
       $('#message_content').val('');
       $('.postBox__button').removeAttr("disabled");
+      var position = $('.chatMain')[0].scrollHeight;
+      $('.chatMain').animate({scrollTop: position });
+
     })
     .fail(function(){
       alert('投稿できませんでした。');
