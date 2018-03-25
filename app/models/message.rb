@@ -5,7 +5,7 @@ class Message < ApplicationRecord
   validates :content_or_image, presence: true
 
   def self.new_messages(group, last_message_id)
-    new_message = Message.where("group_id = #{group} and id > #{last_message_id}")
+    new_message = Message.where("group_id = ? and id > ?", group, last_message_id)
     return new_message
   end
 
