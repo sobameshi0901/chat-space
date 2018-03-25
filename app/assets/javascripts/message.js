@@ -1,9 +1,7 @@
 $(document).on('turbolinks:load',function(){
   function buildHTML(message){
-    var image = ""
-    if(message.image !== null){
-      image = `<img src="${ message.image }", class ="lower-message__image">`
-    }
+    var imageHTML
+    message.image == null ? imageHTML = "" : imageHTML = `<img src="${ message.image }", class ="lower-message__image">`
     var html = `<div class="chatBox", data-message-id=${ message.message_id }>
   <div class="chatBox__name">
     <p>${ message.user_name }</p>
@@ -14,7 +12,7 @@ $(document).on('turbolinks:load',function(){
   <div class="chatBox__text">
     <p>${ message.content }</p>
   </div>
-    ${ image }
+    ${ imageHTML }
   </div>
     `
     return html;
@@ -23,12 +21,11 @@ $(document).on('turbolinks:load',function(){
 
   function autoUpdate(){
     var href = window.location.href
-    var last_message = $('.chatBox').last().attr('data-message-id');
-    console.log(last_message);
+    var lastMessage = $('.chatBox').last().attr('data-message-id');
     $.ajax({
       url: href,
       type: "GET",
-      data: {last_message_id: last_message},
+      data: {last_message_id: lastMessage},
       dataType: 'json',
     })
     .done(function(messages){
@@ -49,10 +46,6 @@ $(document).on('turbolinks:load',function(){
     var position = $('.chatMain')[0].scrollHeight;
     $('.chatMain').animate({scrollTop: position });
   }
-
-
-
-
 
   $('#new_message').on('submit', function(e){
     e.preventDefault();
@@ -78,7 +71,6 @@ $(document).on('turbolinks:load',function(){
       alert('投稿できませんでした。');
     })
   });
-
 
   var interval = setInterval(function() {
   if (document.URL.match("/groups/.*/messages")) {
