@@ -1,19 +1,21 @@
 $(document).on('turbolinks:load',function(){
   function buildHTML(message){
-    var imageHTML
-    message.image == null ? imageHTML = "" : imageHTML = `<img src="${ message.image }", class ="lower-message__image">`
+    var imageHTML = (
+      message.image
+      ? `<img src="${ message.image }", class ="lower-message__image">`
+      : imageHTML = "");
     var html = `<div class="chatBox", data-message-id=${ message.message_id }>
-  <div class="chatBox__name">
-    <p>${ message.user_name }</p>
-  </div>
-  <div class="chatBox__date">
-    <p>${ message.message_created }</p>
-  </div>
-  <div class="chatBox__text">
-    <p>${ message.content }</p>
-  </div>
-    ${ imageHTML }
-  </div>
+    <div class="chatBox__name">
+      <p>${ message.user_name }</p>
+    </div>
+    <div class="chatBox__date">
+      <p>${ message.message_created }</p>
+    </div>
+    <div class="chatBox__text">
+      <p>${ message.content }</p>
+    </div>
+      ${ imageHTML }
+    </div>
     `
     return html;
   }
