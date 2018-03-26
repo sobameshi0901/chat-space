@@ -9,7 +9,6 @@ class Message < ApplicationRecord
     return new_message
   end
 
-
   private
   def content_or_image
     content.presence || image.presence
