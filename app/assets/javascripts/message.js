@@ -66,12 +66,12 @@ $(document).on('turbolinks:load',function(){
       $('.chatMain').append(html);
       $('#message_image').val('');
       $('#message_content').val('');
-      $('.postBox__button').removeAttr("disabled");
       scrollToBottom();
     })
     .fail(function(){
       alert('投稿できませんでした。');
-    })
+    });
+    return false;
   });
 
   var interval = setInterval(function() {
