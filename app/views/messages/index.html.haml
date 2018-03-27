@@ -16,8 +16,5 @@
         = form_for [@group,@message] do |f| 
           = f.text_field :content, placeholder: 'tyep a message', class: 'postBox__text'
           .postBox__file
-            / = f.label :image do
-            = f.file_field :image
-             / , style: 'display:none'
-              / # = fa_icon 'picture-o', class: 'icon'
+          = f.file_field :image
           = f.submit 'Send', class: 'postBox__button'
