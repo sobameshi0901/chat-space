@@ -35,9 +35,9 @@ $(document).on('turbolinks:load',function(){
         messages.forEach(function(message){
           var html = buildHTML(message);
           $('.chatMain').append(html);
-        });
+        })
+        scrollToBottom();
       }
-      scrollToBottom();
     })
     .fail(function(){
       alert('読み込みにエラーが発生しました');
